@@ -68,7 +68,7 @@ userSchema.pre("save", async function (next) {
     // karna chahenge jab ya to user ne sign in kia ho ya 
     // fir use password change karna ho
     if (this.isModified("password")) {
-        this.password = bcrypt.hash(this.password, 10)
+        this.password = await bcrypt.hash(this.password, 10)
         next()
     }
 }) // async islie kyunki algorithms ko 

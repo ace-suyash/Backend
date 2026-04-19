@@ -7,6 +7,7 @@ class ApiResponse {
     }
 }
 
+export {ApiResponse}
 //Standard rules
 //informational responses (Error :  100 - 199)
 //Successful responses (Error 200 - 299)
